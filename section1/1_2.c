@@ -23,7 +23,6 @@ int main(void){
     printf("\nThe number you entered was %d\n", myNumber);
 
      // We will see this in later section. I got a bit carried away..
-    printf(" - - - - - - - - - - - - - - - - - - - - - - - \n");
     printf("IGNORE BELOW THIS,WE WILL SEE THIS AGAIN IN CONTROL FLOW\n");
     printf("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
     if (myNumber%2 == 0){
@@ -31,9 +30,9 @@ int main(void){
         printf("Who would have thought you would pick an even number\n");
     } else {
         printf("The number you entered is %d, it is a odd number!\n", myNumber);
-        printf("Odd number = death, not really!\n\n\n");
+        printf("Odd number = death, not really!\n");
     }
-    printf("- - - - - -  End of Output - - - - - - - - - - - - - ");
+    printf("- - - - - -  End of Output - - - - - - - - - - - - - \n");
     return 0;
 }
 
