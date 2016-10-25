@@ -30,7 +30,6 @@
 int main ( void ){
     int myAge = age;
     printf("I have lived for %d months\n", myAge*MONTH_IN_YEAR);
-    
     return 0;
 }
 
