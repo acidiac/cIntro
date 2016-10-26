@@ -11,6 +11,7 @@
 */
 
 #include <stdio.h>  
+#include <limits.h>
 
 /*
     Before we jump into the syntax for declaring variables its important to understand what varibales are. Variables can be best imagined 
@@ -20,6 +21,8 @@
     refer to them as datatypes and each datatype is assigned necessary memory depending on its expected size. So as we can see it is 
     very important to have good label and know what we will be storing to make sure that our programs are easily understood and work efficiently.
 */    
+
+int dataTypeValues (void);
 
 int main ( void ){
     int age;    // Declaring a variable with label "age" (which stores age of a person) and int is the datatype
@@ -34,8 +37,32 @@ int main ( void ){
 
     // Read more about datatypes << link >>
     // Read more about the print formatting in C  << link >>
+
+    dataTypeValue( ); // calling dataTypeValues function which prints out min and max values for various datatypes in C using limit.h header file
+
+    return 0;
 }
 
-void maxValues() {
-    
+int dataTypeValues ( void ) {
+
+    printf(" - - - - - - - - - - - -Min and Max Values of Datatypes- - - - - - - - - - - - - - - - - - - - - - -");
+    printf("The number of bits in a byte %d\n", CHAR_BIT);
+
+    printf("The minimum value of SIGNED CHAR = %d\n", SCHAR_MIN);
+    printf("The maximum value of SIGNED CHAR = %d\n", SCHAR_MAX);
+    printf("The maximum value of UNSIGNED CHAR = %d\n", UCHAR_MAX);
+
+    printf("The minimum value of SHORT INT = %d\n", SHRT_MIN);
+    printf("The maximum value of SHORT INT = %d\n", SHRT_MAX); 
+
+    printf("The minimum value of INT = %d\n", INT_MIN);
+    printf("The maximum value of INT = %d\n", INT_MAX);
+
+    printf("The minimum value of CHAR = %d\n", CHAR_MIN);
+    printf("The maximum value of CHAR = %d\n", CHAR_MAX);
+
+    printf("The minimum value of LONG = %ld\n", LONG_MIN);
+    printf("The maximum value of LONG = %ld\n", LONG_MAX);
+
+    return 0;
 }
