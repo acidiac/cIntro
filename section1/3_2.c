@@ -18,6 +18,7 @@ int main (void) {
     printf("What is your name?\n");
     scanf("%s", &myName);
     printf("you are %s!\n", myName);    // %s is used for formatting string outputs
+    // when you compile try entering words with space
     // When we compile this it generates a warning {format specifies type 'char *' but the argument has type 'char (*)[20]' [-Wformat]}
 
     return 0;
