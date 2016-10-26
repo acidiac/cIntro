@@ -22,7 +22,7 @@
     very important to have good label and know what we will be storing to make sure that our programs are easily understood and work efficiently.
 */    
 
-int dataTypeValues (void);
+int dataTypeValues ( void );    // Function prototype declaration
 
 int main ( void ){
     int age;    // Declaring a variable with label "age" (which stores age of a person) and int is the datatype
@@ -38,12 +38,12 @@ int main ( void ){
     // Read more about datatypes << link >>
     // Read more about the print formatting in C  << link >>
 
-    dataTypeValue( ); // calling dataTypeValues function which prints out min and max values for various datatypes in C using limit.h header file
+    dataTypeValues( ); // calling dataTypeValues function which prints out min and max values for various datatypes in C using limit.h header file
 
     return 0;
 }
 
-int dataTypeValues ( void ) {
+int  dataTypeValues  (void ) {
 
     printf(" - - - - - - - - - - - -Min and Max Values of Datatypes- - - - - - - - - - - - - - - - - - - - - - -");
     printf("The number of bits in a byte %d\n", CHAR_BIT);
