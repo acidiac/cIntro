@@ -20,7 +20,7 @@
 int main (void) {
     // Here we are defining a char array which can contain 20 elements and assign a string "amit chanchal" to it.
     char myName[20] = "amit chanchal"; 
-    printf("my name is %s", myName);    // %s is used for formatting string outputs
+    printf("my name is %s\n", myName);    // %s is used for formatting string outputs
     return 0;
 }
 
