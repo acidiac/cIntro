@@ -45,7 +45,7 @@ int main ( void ){
 
 int  dataTypeValues  (void ) {
 
-    printf(" - - - - - - - - - - - -Min and Max Values of Datatypes- - - - - - - - - - - - - - - - - - - - - - -");
+    printf(" - - - - - - - - - - - -Min and Max Values of Datatypes- - - - - - - - - - - - - - - - - - - - - - -\n");
     printf("The number of bits in a byte %d\n", CHAR_BIT);
 
     printf("The minimum value of SIGNED CHAR = %d\n", SCHAR_MIN);

@@ -27,7 +27,8 @@
 #define MONTH_IN_YEAR 12
 
 
-int main ( void ){
+int main ( void ) {
+    // Syntax for declaring and initializing variables <DATATYPE> <Variable Name> ;
     int myAge = age;
     printf("I have lived for %d months\n", myAge*MONTH_IN_YEAR);
     return 0;
