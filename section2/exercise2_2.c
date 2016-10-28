@@ -19,24 +19,35 @@
 
 // Prototypes
 void renderChart(int score);
+void drawDashedLine(void);
+
 
 int main (void) {
     int scores[9] = {20,21,23,12,11,19,5,8,5}; // Storing all the scores in Scores array of int 
     // How do we get length of an array?
     int numScores = sizeof(scores)/ sizeof(int);
-    printf("Total number of scores %d\n", numScores);
-
+    printf("Chart showing scores of  %d students in the class\n", numScores);
+    drawDashedLine();
+    
     for (int num=0; num<numScores; num++){
         int currentVal = scores[num];
+        printf("[%d]\t", currentVal);
         renderChart(currentVal);
+        printf("\n");
     }
+    
+    drawDashedLine();
+
     return 0;
 }
 
 
 void renderChart(int score) {
     for (int i = 0; i<=score; i++){
-        puts("|");
+        printf("|");
     }
-    puts("\n");
+}
+
+void drawDashedLine(void){
+    printf("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
 }
