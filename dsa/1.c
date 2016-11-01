@@ -10,6 +10,8 @@
 */
 
 #include <stdio.h>
+#include <time.h>
+
 long int multiplyTwo(int x, int y);
 
 int main(void) {
@@ -19,8 +21,16 @@ int main(void) {
     scanf("%d", &x);
     printf("Please enter the second number\n");
     scanf("%d", &y);
+    clock_t t;
+    t = clock();
+    // Main Execution of our function
     product = multiplyTwo(x, y);
     printf("the product is %ld\n", product);
+
+    t = clock() - t;
+    double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
+    printf("took %f seconds to execute \n", time_taken);
+    
     return 0;
 }
 
@@ -54,7 +64,7 @@ long int multiplyTwo(int x, int y){
       4936-
     -----------------
       51828
-      
+
 */
 
 
