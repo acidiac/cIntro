@@ -10,9 +10,18 @@
 
 int main (void){
     // << and >> operators shifts n integer by given number of bits 
-    int x = 2;
-    int y = x << 2;
-    printf("initial value %d, shifted value %d\n", x, y);
+    int x = 7;
+    
+    printf("shifted value %d\n", x);
+    x = x << 1;
+    printf("shifted value %d\n", x);
+    x = x << 1;
+    printf("shifted value %d\n", x);
+    x = x << 1;
+    printf("shifted value %d\n", x);
+    x = x << 1;
+    printf("shifted value %d\n", x);
+
     return 0;
 
 }
