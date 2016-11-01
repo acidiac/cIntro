@@ -7,11 +7,9 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+#define BIT_MAX  128
 
-#define 8BIT_MAX 128
-
-int[] printBinary8(int number);
-void printBinary(int binaryArray[]);
+void conBinary8(int number);
 void shiftThis (void);
 
 
@@ -19,39 +17,40 @@ int main (void){
     int inputNumber;
     printf("Please provide a number less than 128:");
     scanf("%d", &inputNumber);
-    printBinary(getBinary8(inputNumber));
+    conBinary8(inputNumber);
+    printf("\n");
     return 0;
 }
 
-int[] getBinary8(int number) {
+void conBinary8(int number) {
     // Prints the binry 8 bit equivalent in binary
-    int result[8];
-    int currentBitValue = 8BIT_MAX;
+    int currentBitValue = BIT_MAX;
     for (int i = 0 ; i < 8 ; i++){
         int remain = number - currentBitValue;
-        if (remain >= 0 && number <  8BIT_MAX){
-            result[i] = 1;
+        if (remain >= 0 && number <  BIT_MAX){
+            printf("1");
             number = remain;
-        } else if (remain < 0 && number <  8BIT_MAX){
-            result[i] = 0;
+        } else if (remain < 0 && number <  BIT_MAX){
+            printf("0");
         } else {
+            printf("Out of Range!/n");
             break;
         }
         currentBitValue = currentBitValue >> 1;
     }
-    return result;
+    
 }
 
-
+/*
 void printBinary(int binaryArray[]) {
     int length = sizeof(binaryArray)/ sizeof(int); // Length of the array
-    printf("| ")
+    printf("| ");
     for (int i = 0; i < length; i++){
         printf("%d | ", binaryArray[i]);
     }
     printf("\n");
-    return 0;
 }
+*/
 
 
 void shiftThis (void){
@@ -66,5 +65,5 @@ void shiftThis (void){
     printf("shifted value %d\n", x);
     x = x << 1;
     printf("shifted value %d\n", x);
-    return 0;
+   
 }
