@@ -24,13 +24,13 @@ int main(void) {
     clock_t t;
     t = clock();
     // Main Execution of our function
-    product = multiplyTwo(x, y);
+    //product = multiplyTwo(x, y);
+    product = x * y;
     printf("the product is %ld\n", product);
 
     t = clock() - t;
     double time_taken = ((double)t)/CLOCKS_PER_SEC; // in seconds
     printf("took %f seconds to execute \n", time_taken);
-    
     return 0;
 }
 
