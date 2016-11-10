@@ -12,7 +12,9 @@
 #include <stdio.h>
 #include <time.h>
 
-long int multiplyTwo(int x, int y);
+long int multiplyA(int x, int y);
+long int multiplyB(int x, int y);
+long int multiplyC(int x, int y);
 
 int main(void) {
     long int product;
@@ -24,7 +26,7 @@ int main(void) {
     clock_t t;
     t = clock();
     // Main Execution of our function
-    //product = multiplyTwo(x, y);
+    //product = multiplyA(x, y);
     product = x * y;
     printf("the product is %ld\n", product);
 
@@ -37,10 +39,11 @@ int main(void) {
 // Now think about how we want to implement the multiplyTwo functionality
 
 /*
+    A Very Naive Solution----
     In this implementation we can think of mutliplying two numbers as adding one number over and over again, i.e. other number times 
     2*4 can be seen as 2+2+2+2 or 4+4, already we can see that one takes fewer iterations
 */
-long int multiplyTwo(int x, int y){
+long int multiplyA(int x, int y){
     int i, j;
     long int product = 0;
     if (x >= y){
@@ -56,7 +59,7 @@ long int multiplyTwo(int x, int y){
 }
 
 /*
-    Primary School Solution
+    Primary School Solution ---
         1234
         *  42
         ------------
@@ -64,8 +67,23 @@ long int multiplyTwo(int x, int y){
       4936-
     -----------------
       51828
+*/
+
+long int multiplyB(int x, int y){
+
+}
+
+/*
+    Karatsuba Multiplication
+    
+
+
 
 */
+
+long int multiplyC(int x, int y){
+    
+}
 
 
 
