@@ -4,9 +4,12 @@
 #include <stdlib.h>
 
 int main(void){
-    int a[10];
+    int a[10][5];
     for (int i = 0; i < 10; i++){
-        *(a+i) = rand();
+        for (int j=0; j<5; j++){
+            *(*(a+i)+j) = rand();
+        }
+        
     }
 
     for (int j = 0; j < 10; j++){
