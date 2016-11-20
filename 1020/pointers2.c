@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 
-void displayArrayContent(int *arrayPointer, int len);
+void displayArrayContent(uint arrayPointer, int len);
 int main (void){
     int age[5] = {1,2,3,4,5};
     int length = sizeof(age)/sizeof(int);
@@ -16,6 +16,9 @@ int main (void){
 
 }
 
-void displayArrayContent(int *arrayPointer, int len){
+void displayArrayContent(uint arrayPointer, int len){
+    for (int i=0; i<len; i++){
+        printf(array)
+    }
 
 }

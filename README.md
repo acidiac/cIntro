@@ -6,4 +6,6 @@ Section 1 --- Overview and Fundamentals
         unit3 -- Strings and operations on strings
 
 
+Section 4: Composite and Defined Datatypes
+
 
