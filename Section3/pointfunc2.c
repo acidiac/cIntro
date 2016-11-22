@@ -1,9 +1,13 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main(void){
-    char name[10] = "A.Chanchal";
-    char* namePtr;
-    namePtr = &name[0];
-    printf("Pointer to first item [%p] is same as name of array [%p]\n", namePtr, name);
+    int xname[5] = {1,2,3,4,5};
+    int* arrPtr;
+    arrPtr = xname;
+    for (int i = 0; i < 5; i++){
+        printf("Pointer address:   %p \t and the value:  %d \n", arrPtr,*arrPtr);
+        arrPtr++;
+    }
     return 0;
 }
