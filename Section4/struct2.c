@@ -1,6 +1,9 @@
 /* Basic structures*/
 #include<stdio.h>
-
+/*
+    Using typedef to declare custom datatype so 
+    we don't have to use struct with variable declarations.
+*/
 typedef struct  {
     int emp_id;
     char emp_name[10];
@@ -10,7 +13,8 @@ typedef struct  {
 void printEmp( employee emp);
 
 int main(void){
-    employee noname = {1001, "noname", 45000};
+    /* No need to add struct to declaration */
+    employee noname = {1001, "noname", 45000}; 
     printEmp(noname);
     return 0;
 }
