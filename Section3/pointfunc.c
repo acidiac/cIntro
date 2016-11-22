@@ -5,18 +5,11 @@
     Communicating through pointers
 */
 
-int func1(int *sharednumber);
-int fun2(int *sharednumber);
-
-
-int main (void) {
-    int num = 50;
-    int *numptr;
-    numptr = &num;
-    printf("We have changed the memory to %d", func1(numptr));
+int main (void){
+    int x = 12;
+    int* xptr;  // creates a pointer variable
+    xptr = &x; // using & operator we can assign address of variable x to xptr
+    printf("The address of the pointer %p \n", xptr);
+    printf("Value of variable at address %p is %d \n", xptr, *xptr);
     return 0;
-}
-
-int func1( int *num){
-    return *num += 10;
 }
