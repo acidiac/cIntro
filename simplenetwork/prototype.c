@@ -14,6 +14,12 @@
 
 #include<stdio.h>
 
+/*
+    Na ---> Nb --> Nb1
+                    --> Nb2
+
+*/
+
 // type definition
 typedef struct nodeA{
     nodeData data;
