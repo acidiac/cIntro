@@ -8,8 +8,9 @@
     5. have a way to manage memory upon creation, while growing and upo deletion
     6. generate some key network based statistics for the type 
 
-    in some ways we are almost going to recreate some sort of of tree like form which might be the purpose then we are adding on some basic analysis 
-    in the term of network typologies and methods which eventually will help us understand it better.
+    **  in some ways we are almost going to recreate some sort of of tree like form which might be the purpose then 
+            we are adding on some basic analysis in the term of network typologies and methods which eventually will 
+            help us understand it better.
 */
 
 #include<stdio.h>
