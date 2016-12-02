@@ -14,7 +14,11 @@ struct node_proto{
 } ;
 
 int main (int argc, char* argv[]){
-    
+    int n;
+    int x;
+    // declaring head node set to null
+    struct node* head = NULL;
+
 }
 
 
