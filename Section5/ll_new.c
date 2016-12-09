@@ -1,6 +1,7 @@
 /* Some kind of random linked list implementation*/
 #include<stdio.h>
 #include<stdlib.h>
+#include <math.h>
 
 // Defining structure to store 2D catersian coords as (x,y)
 typedef struct {
@@ -16,9 +17,42 @@ typedef struct nType {
 
 typedef node *list;
 
-void displayNodes(list refer){
+int numPoints(list headPtr){
     list temp;
-    temp = refer;
+    int pointCount = 0;
+    temp = headPtr;
+    while(temp != NULL){
+        pointCount++;
+    }
+    return pointCount;
+}
+
+double distanceBtwPoints(list headPtr){
+    list temp;
+    temp = headPtr;
+    double dist;
+    int tempx = 0;
+    int tempy = 0;
+    while(temp!=NULL){
+        if(tempx != 0){
+            // double pow(double x, double y) Returns x raised to the power of y.
+            //double sqrt(double x)
+            double diffx, diffy;
+            diffx = (double) (temp->data.x - tempx) ;
+            diffy = (double) (temp->data.y - tempy);
+            dist += sqrt(pow(diffx, 2.0)+pow(diffy, 2.0));
+        } 
+        tempx = temp->data.x;
+        tempy = temp->data.y;
+		temp = temp->link;
+	}
+    return dist;
+}
+
+
+void displayNodes(list headPtr){
+    list temp;
+    temp = headPtr;
 	while(temp!=NULL){
 		printf("(X:%d, Y:%d)\n", temp->data.x, temp->data.y);
 		temp = temp->link;
@@ -26,15 +60,19 @@ void displayNodes(list refer){
 }
 
 
+
 list insertNodes(int count){
     coords point;
     list head, temp;
+    printf("You are about to add %d points...\n\n", count);
     while (count > 0){
-        printf("Add x value for the point:\n");
+        printf("- - - - - - - - - - - - - - - - - - - -- - Adding Point - - - -- - - - - - -- - - - - - - - - - -- -  -- - \n");
+        printf("Value for x (ingeter):\n");
         scanf("%d", &point.x);
-        printf("Add y value for the point:\n");
+        printf("Valvue for y (Integer):\n");
         scanf("%d", &point.y);
-        printf("point you are adding is (%d, %d)\n", point.x, point.y);
+        printf("- - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - -- - - -- - - - - - -- - - - - - - - - - -- -  -- - \n");
+        //printf("point you are adding is (%d, %d)\n", point.x, point.y);
         temp = (list) malloc(sizeof(node));
         if (temp != NULL){
             temp->data = point;
@@ -45,6 +83,7 @@ list insertNodes(int count){
             break;
         }
     }
+    printf("\nAll points added operation complete!\n");
     return head;
 }
 
@@ -57,7 +96,12 @@ int main(int argc, char* argv[]){
     scanf("%d", &count);
     head = insertNodes(count);
     //READING THE LIST
+    printf("Details of the points added to the list.\n");
     displayNodes(head);
+    printf("Total number of points added: %d\n", numPoints(head));
+    printf("Total distance between all the ponts: %.2lf\n", distanceBtwPoints(head));
+    printf("+++++++++++++++Displaying all the points ++++++++++++++++\n");
+    
 	
     return 0;
 }
