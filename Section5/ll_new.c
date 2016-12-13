@@ -121,6 +121,15 @@ void displayNodes(list headPtr){
 	}
 }
 
+/*
+    @params: list or node pointer
+    output: 0/1 bool output 
+    checks if the points stored in the list are self closing
+*/
+int isClosed(list headPtr){
+
+}
+
 
 
 list insertNodes(int count){
