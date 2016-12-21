@@ -7,6 +7,7 @@
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 /*
     Before we get into pointers let's brifly look at how computer memory works. In modern computer systems there are generally
@@ -23,4 +24,20 @@
     <Datatype> *<variableName>;
     The asterix tells the compiler that it is an pointer variable. 
 */
+int main( ){
+    int x = 23; 
+    /*declaring a pointer variable with the '*', this pointer is of integer type which means it points to the block in memory 
+        which can hold a integer type data. 
+    */
+    int *pointerToX;
+    /*
+        pointerToX that we just declared has no assignment and does not point to anything. We can make it point to variable x 
+        by using the keyword '&'
+    */
+    pointerToX = &x;
+    // Printing out the pointer value
+    printf("Pointer variable is %p\n", pointerToX);
+    //Dereferencing a pointer
 
+    return 0;
+}
