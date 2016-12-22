@@ -38,6 +38,6 @@ int main( ){
     // Printing out the pointer value
     printf("Pointer variable is %p\n", pointerToX);
     //Dereferencing a pointer
-
+    printf("Value at address [%p] is %d \n ", pointerToX, *pointerToX);
     return 0;
 }
