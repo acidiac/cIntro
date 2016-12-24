@@ -7,7 +7,7 @@
 */
 #include <stdio.h>
 int doubleValue(int num);
-int doubleValueAt(int *num);
+void doubleValueAt(int *num);
 
 int main(int argc, char* argv[]){
     int number = 23;
@@ -18,16 +18,16 @@ int main(int argc, char* argv[]){
     printf("Doubling by value, %d\n", doubleValue(number));
     printf("original number %d\n", number);
     // Now we will pass by argument by address
-    printf("Doubling by address reference %d\n", doubleValueAt(numPointer));
-    printf("original number %d\n", number);
+    doubleValueAt(numPointer);
+    printf("Doubling by address reference  now value of original variable is %d\n", number);
     return 0;
 }
 
 int doubleValue(int num){
+    // We can directly change the variables through pointers
     return num*2;
 }
 
-int doubleValueAt(int *num){
-    return (*num)*2;
-
+void doubleValueAt(int *num){
+    *num =  (*num)*2;
 }
