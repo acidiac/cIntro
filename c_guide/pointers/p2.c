@@ -6,28 +6,23 @@
     Using pointers, Basic operations
 */
 #include <stdio.h>
-int doubleValue(int num);
-void doubleValueAt(int *num);
+/*
+    Functions and Pointers
 
-int main(int argc, char* argv[]){
-    int number = 23;
-    int *numPointer;
-    numPointer = &number;
-    printf("Example to demonstrate basic uses of pointers\n");
-    // first we are going pass arguments by value
-    printf("Doubling by value, %d\n", doubleValue(number));
-    printf("original number %d\n", number);
-    // Now we will pass by argument by address
-    doubleValueAt(numPointer);
-    printf("Doubling by address reference  now value of original variable is %d\n", number);
-    return 0;
+    Pointers provide us with a handy means to achieve two important things which otherwise would be impossible in the c language
+    1) Way to manipulate data which is not local to the function ( not in the scope of the function)
+    2) Find a way around limitation of single return value from the function
+
+*/
+void addTen(int *ptrToInt ){
+    *ptrToInt += 10;
+    printf("Added 10 to the pointer value");
 }
-
-int doubleValue(int num){
-    // We can directly change the variables through pointers
-    return num*2;
-}
-
-void doubleValueAt(int *num){
-    *num =  (*num)*2;
+int main (int argc, char* argv[]){
+   int localVar = 23;
+   int* ptr ; 
+   ptr = &localVar;
+   addTen(ptr);
+   printf("Ten added to the local variable localVar %d \n", localVar);
+   return 0;
 }
